@@ -1,4 +1,4 @@
-// <reference types="Cypress" />
+//<reference types="Cypress" />
 require('cypress-xpath');
 
 describe('Login Functionality Test', () => {
