@@ -17,23 +17,15 @@ describe('Checking UI ELement',function () {
        cy.xpath('//*[@id="mktoForm_1001"]/div[5]/span/button').click()
        const numberOfRefreshes = 5;
 
-    cy._.ti(numberOfRefreshes, (index) => {
-      cy.log(`Refreshing page - Attempt ${index + 1}`);
+    //cy._.times(numberOfRefreshes, (index) => {
+      //cy.log(`Refreshing page - Attempt ${index + 1}`);
       cy.reload();
       cy.url().should('include', 'what-is-a-virtual-firewall.html');
       // Add assertions if needed
+      cy.log('All refreshes completed.');
+      cy.reload();
     });
 
-    cy.log('All refreshes completed.');
+   
       })
       
-       //cy.xpath('//*[@id="totalContent-navigation"]/ul/li[1]/a').click()
-       //cy.xpath('//*[@id="container-27765f2973"]/div[2]/div/ul/li[2]/article/dl[2]/div[5]/dd/a/span').click()
-
-       
-    })
-  
-    
-  
-    
-    
