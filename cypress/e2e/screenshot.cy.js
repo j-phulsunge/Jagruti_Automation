@@ -1,15 +1,13 @@
-Cypress.Commands.overwrite(
-    'screenshot',
-    (originalFn, subject, name, options) => {
-      // only take screenshots in headless browser
-      if (Cypress.browser.isHeadless) {
-        // return the original screenshot function
-        return originalFn(subject, name, options)
-      }
+const { describe } = require("mocha");
+
+describe('1st screenshot',()=>
+{
+  it('capture screenshot',()=>
+  {
+    cy.visit("https://publish-p30618-e1050810.adobeaemcloud.com/en-us/home/frameworks/totalcontent/demo.html");
+    cy.screenshot("homepage");
+    cy.get("img[alt='TotalConetent']").screenshot("logo");
+
+  })
   
-      return cy.log('No screenshot taken when headed')
-    }
-  )
-  
-  // only takes in headless browser
-  cy.screenshot()
+})
