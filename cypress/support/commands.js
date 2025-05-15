@@ -1,3 +1,5 @@
+
+
 // ***********************************************
 // This example commands.js shows you how to
 // create various custom commands and overwrite
@@ -25,3 +27,14 @@
 
 
 /// <reference types="cypress" />
+
+//import 'cypress-visual-regression/dist/commands';
+
+//compareSnapshotCommand();
+require('cypress-downloadfile/lib/downloadFileCommand')
+
+Cypress.on('uncaught:exception', (err, runnable) => { // https://docs.cypress.io/api/cypress-api/catalog-of-events#Uncaught-Exceptions
+    if(err.message.includes('jQuery is not defined')){
+        return false
+    }
+  })

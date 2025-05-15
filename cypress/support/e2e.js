@@ -15,3 +15,12 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
+
+const { addCompareSnapshotCommand } = require('cypress-visual-regression/dist/command')
+addCompareSnapshotCommand({
+    capture: 'fullPage', // cypress screenshot option
+  errorThreshold: 0.5, // plugin threshold option
+  pixelmatchOptions: {
+    threshold: 0 
+}
+})

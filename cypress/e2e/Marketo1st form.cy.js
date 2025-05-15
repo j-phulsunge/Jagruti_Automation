@@ -3,7 +3,7 @@
 /// // <reference types="Cypress" />
 require('cypress-xpath');
 describe('Checking UI ELement',function () {
-    it("Checking Radio button", function () {
+    it("Verify Form submission", function () {
       Cypress.on('uncaught:exception', (err, runnable) => {
           return false
           })
@@ -21,7 +21,7 @@ describe('Checking UI ELement',function () {
       //cy.log(`Refreshing page - Attempt ${index + 1}`);
       cy.reload();
       cy.url().should('include', 'what-is-a-virtual-firewall.html');
-      // Add assertions if needed
+   
       cy.log('All refreshes completed.');
       cy.reload();
     });

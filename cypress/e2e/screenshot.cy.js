@@ -1,4 +1,8 @@
-const { describe } = require("mocha");
+//<reference types="Cypress" />
+require('cypress-xpath');
+
+//const { describe } = require("mocha");
+
 
 describe('1st screenshot',()=>
 {
