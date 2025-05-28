@@ -1,0 +1,37 @@
+{
+    "brandDetails" :{
+        "Local":{
+            "Initialyzer": "http://localhost:4502"
+        },
+        "Dev":{
+            "Initialyzer": "https://publish-p30618-e1050810.adobeaemcloud.com"
+        },
+        "Stage":{
+            "Initialyzer": "https://publish-p30618-e1050810.adobeaemcloud.com"
+        },
+        "Prod":{
+            "Initialyzer": "https://publish-p30618-e1050810.adobeaemcloud.com"
+        },
+        "Home":{
+            "Initialyzer": "https://publish-p30618-e1050810.adobeaemcloud.com"   
+        }
+    },
+        "url": {
+             "Totalcontent": "/en-us/home/frameworks/totalcontent/demo.html"
+        
+               },
+             "deviceViewport":{
+                "label": "default",
+                "device": "default",
+                "viewport": {
+                "width": 1400,
+                "height": 800
+            },
+            "scrollOffsetTop" : -200
+            
+    },
+    "device":{
+        "ipad": "iPad",
+        "iPhone": "iPhone"
+    }
+ }
